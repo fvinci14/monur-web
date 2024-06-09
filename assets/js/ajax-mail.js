@@ -1,34 +1,48 @@
-$(function() {
-    var form = $('#contact-form');
-    var formMessages = $('.form-messages');
+ $(function() {
 
+    // Get the form.
+    var form = $('#contact-form');
+
+    // Get the messages div.
+    var formMessages = $('.form-message');
+
+    // Set up an event listener for the contact form.
     $(form).submit(function(e) {
+        // Stop the browser from submitting the form.
         e.preventDefault();
+
+        // Serialize the form data.
         var formData = $(form).serialize();
 
+        // Submit the form using AJAX.
         $.ajax({
             type: 'POST',
             url: $(form).attr('action'),
             data: formData
         })
         .done(function(response) {
-            console.log("Response: " + response); // Mostrar la respuesta en la consola
+            // Make sure that the formMessages div has the 'success' class.
             $(formMessages).removeClass('error');
             $(formMessages).addClass('success');
+
+            // Set the message text.
             $(formMessages).text(response);
-            $('#name').val('');
-            $('#email').val('');
-            $('#message').val('');
+
+            // Clear the form.
+            $('#contact-form input, #contact-form textarea').val('');
         })
         .fail(function(data) {
-            console.log("Error: " + data.responseText); // Mostrar el error en la consola
+            // Make sure that the formMessages div has the 'error' class.
             $(formMessages).removeClass('success');
             $(formMessages).addClass('error');
+
+            // Set the message text.
             if (data.responseText !== '') {
                 $(formMessages).text(data.responseText);
             } else {
-                $(formMessages).text('An error occurred and your message could not be sent.');
+                $(formMessages).text('Oops! An error occurred and your message could not be sent.');
             }
         });
     });
+
 });
