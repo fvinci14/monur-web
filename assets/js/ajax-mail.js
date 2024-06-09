@@ -42,7 +42,7 @@ $(function() {
             if (data.responseText !== '') {
                 $(formMessages).text(data.responseText);
             } else {
-                $(formMessages).text('Oops! An error occurred and your message could not be sent.');
+                $(formMessages).text('Actualmente no tenemos el formulario activo. Prueba más tarde. Gracias.');
             }
         });
     });
