@@ -21,6 +21,7 @@
             data: formData
         })
         .done(function(response) {
+            console.log("Response: " + response); // Mostrar la respuesta en la consola
             // Make sure that the formMessages div has the 'success' class.
             $(formMessages).removeClass('error');
             $(formMessages).addClass('success');
@@ -32,6 +33,7 @@
             $('#contact-form input, #contact-form textarea').val('');
         })
         .fail(function(data) {
+            console.log("Error: " + data.responseText); // Mostrar el error en la consola
             // Make sure that the formMessages div has the 'error' class.
             $(formMessages).removeClass('success');
             $(formMessages).addClass('error');
