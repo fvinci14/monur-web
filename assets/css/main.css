@@ -2282,11 +2282,22 @@ input.main-search-input::placeholder {
   padding: 18px 30px;
   color: var(--text);
 }
+
+.hero-1 .hero-contact-box .contact-form-item .form-clt textarea {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(36, 37, 73, 0.1);
+  background-color: var(--white);
+  padding: 18px 30px;
+  color: var(--text);
+}
+
 @media (max-width: 767px) {
   .hero-1 .hero-contact-box .contact-form-item .form-clt input {
     line-height: 1px;
   }
 }
+
 .hero-1 .hero-contact-box .contact-form-item .payment-save {
   display: flex;
   align-items: center;
