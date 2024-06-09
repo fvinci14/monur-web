@@ -16,7 +16,7 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "modelo.onuregional@gmail.com";
+        $recipient = "info@monur.com.ar";
 
         // Build the email content.
         $email_content = "Name $name\n";

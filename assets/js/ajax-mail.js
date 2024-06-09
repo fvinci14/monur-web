@@ -30,7 +30,6 @@
 
             // Clear the form.
             $('#contact-form input, #contact-form textarea').val('');
-            console.log("Response: " + response); // Mostrar la respuesta en la consola
         })
         .fail(function(data) {
             // Make sure that the formMessages div has the 'error' class.
@@ -43,8 +42,6 @@
             } else {
                 $(formMessages).text('Oops! An error occurred and your message could not be sent.');
             }
-
-            console.log("Error: " + data.responseText); // Mostrar el error en la consola
         });
     });
 
