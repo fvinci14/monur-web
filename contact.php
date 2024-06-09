@@ -29,11 +29,12 @@
         if (mail($recipient,  $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank You! Your message has been sent.";
+            echo "Gracias! Tu mensaje ha sido enviado.";
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong ande we couldn't send your message.";
+            echo "Actualmente no tenemos el formulario activo. Prueba más tarde. Gracias.";
+            //echo "Oops! Something went wrong ande we couldn't send your message.";
         }
 
     } else {
