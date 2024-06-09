@@ -11,9 +11,6 @@
         $name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["message"]);
-
-        console.log($name, $email, $message);
-
         
 
         // Set the recipient email address.
