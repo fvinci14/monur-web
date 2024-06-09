@@ -19,7 +19,7 @@
 
         // Build the email content.
         $email_content = "Name $name\n";
-        $email_content .= "Email \n$message\n";
+        $email_content .= "Email \n$email\n";
         $email_content .= "Message \n$message\n";
 
         // Build the email headers.
