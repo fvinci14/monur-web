@@ -89,28 +89,36 @@ Version: 1.0.0
 /* Estilos para el contenedor de retroalimentación */
 #feedback {
   display: none;
-  padding: 10px;
+  padding: 10px 40px 10px 10px;
+  /* Espacio extra para la cruz */
   margin-top: 10px;
   border-radius: 5px;
-  font-family: Arial, sans-serif;
+  position: relative;
 }
 
 #feedback.success {
   color: green;
-  border: 1px solid green;
   background-color: #e6ffe6;
 }
 
 #feedback.error {
   color: red;
-  border: 1px solid red;
   background-color: #ffe6e6;
 }
 
 #feedback.processing {
   color: blue;
-  border: 1px solid blue;
   background-color: #e6e6ff;
+}
+
+#feedback .close-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .theme-btn::before {

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const $form = document.querySelector('#home-form');
     const $feedback = document.querySelector('#feedback');
+    const $message = $feedback.querySelector('.message');
 
     $form.addEventListener('submit', handleSubmit);
 
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showFeedback(message, type) {
-        $feedback.textContent = message;
+        $message.textContent = message;
         $feedback.className = type;
         $feedback.style.display = 'block';
     }
